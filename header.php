@@ -46,7 +46,7 @@
           alt="Our story" />
         <span class="menu-subtitle">Photo</span>
       </a>
-      <a class="menu-link" href="<?php echo get_bloginfo('template_url');?>/contact">
+      <a class="menu-link" href="<?php echo get_bloginfo('template_url');?>/?page_id=30">
         <img class="menu-img" src="<?php echo get_bloginfo('template_url');?>/assets/img/links/contact_us.png"
           alt="Contact Us" />
         <span class="menu-subtitle">Contact us</span>
