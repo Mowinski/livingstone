@@ -7,7 +7,7 @@
   background-size: contain, cover;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2028px) {
   .contact {
     padding-top: 6rem;
     padding-left: 2rem;
@@ -1250,7 +1250,7 @@ a {
   background-size: contain, cover;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2028px) {
   .story {
     padding-top: 6rem;
   }
