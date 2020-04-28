@@ -130,11 +130,14 @@
       </div>
     </div>
 
-    <div class="swiper-button-next"></div>
-    <button class="zoom-btn">
-      <img src="<?php echo bloginfo('template_url'); ?>/assets/img/graphic/expand.png" alt="" />
-    </button>
-    <div class="swiper-button-prev"></div>
+    <div class="slider-controls">
+
+      <div class="swiper-button-next"></div>
+      <button class="zoom-btn">
+        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/graphic/expand.png" alt="" />
+      </button>
+      <div class="swiper-button-prev"></div>
+    </div>
   </div>
 </section>
 
