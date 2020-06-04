@@ -15,7 +15,7 @@ get_header( );
     <div class="col-12 col-sm-8">
       <div class="kit">
         <span class="kit-pointer kit-left-pointer"></span>
-        <a href="" class="kit-title">press kit</a>
+        <a href="<?php echo get_theme_mod(ThemeSettings::PRESS_KIT);?>" class="kit-title">press kit</a>
         <span class="kit-pointer kit-right-pointer"></span>
       </div>
       <h2 class="title">contact us</h2>

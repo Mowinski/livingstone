@@ -127,6 +127,13 @@ class Livingstone_Customize
             'transport' => 'postMessage',
         ));
 
+        $wp_customize->add_setting(ThemeSettings::PRESS_KIT, array(
+            'default' => 0,
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'transport' => 'postMessage',
+        ));
+
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'about_team_text_control', array(
             'type' => 'textarea',
             'label' => __('About us text', 'mytheme'),
@@ -163,6 +170,14 @@ class Livingstone_Customize
             'type' => 'number',
             'label' => __('Footer carousel post id (image proportion 3:2 eg: 1742x1162 px)', 'mytheme'),
             'settings' => ThemeSettings::FOOTER_CAROUSEL,
+            'priority' => 11,
+            'section' => 'livingstone_options_texts',
+        )));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'presskit_text_controll', array(
+            'type' => 'url',
+            'label' => __('Presskit webpage', 'mytheme'),
+            'settings' => ThemeSettings::PRESS_KIT,
             'priority' => 11,
             'section' => 'livingstone_options_texts',
         )));

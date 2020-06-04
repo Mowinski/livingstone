@@ -8,6 +8,7 @@ class ThemeSettings {
     const WEAPONS = 'weapons';
     const GALLERY = 'gallery';
     const FOOTER_CAROUSEL = 'footer_carousel';
+    const PRESS_KIT = 'press_kit';
 }
 
 
