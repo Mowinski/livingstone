@@ -42,28 +42,13 @@ get_header( );
 
   <div class="row justify-content-between contact-footer-row">
     <div class="col-12 col-md-3">
-      <ul class="footer-links">
-        <li class="footer-link-item">
-          <a href="https://www.facebook.com/drlivingstonegame" target="_blank" rel="noopener">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/links/fb.png" alt="icon" />
-          </a>
-        </li>
-        <li class="footer-link-item">
-          <a href="https://msha.ke/livingstone_game/" target="_blank" rel="noopener">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/links/milk_shake.png" alt="icon" />
-          </a>
-        </li>
-        <li class="footer-link-item">
-          <a href="https://twitter.com/Livi_TheGame" target="_blank" rel="noopener">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/links/twitter.png" alt="icon" />
-          </a>
-        </li>
-        <li class="footer-link-item">
-          <a href="https://www.instagram.com/livingstone_game/" target="_blank" rel="noopener">
-            <img src="<?php echo bloginfo('template_url'); ?>/assets/img/links/insta.png" alt="icon" />
-          </a>
-        </li>
-      </ul>
+        <?php wp_nav_menu(array(
+            'theme_location' => 'social',
+            'container' => '',
+            'menu_class' => 'footer-links',
+            'walker' => new Social_Walker_Nav_Menu(),
+        )); ?>
+
     </div>
     <div class="col-6 col-md-2 contact-logo">
       <a href="<?php echo get_home_url(); ?>">
@@ -72,3 +57,4 @@ get_header( );
     </div>
   </div>
 </div>
+
