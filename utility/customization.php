@@ -7,6 +7,117 @@ class Livingstone_Customize
     {
         self::register_images($wp_customize);
         self::register_texts($wp_customize);
+        self::register_backgrounds($wp_customize);
+    }
+
+    public static function register_backgrounds($wp_customize)
+    {
+        $wp_customize->add_section('livingstone_options_backgrounds', array(
+            'title' => __('Backgorund', 'mytheme'),
+            'priority' => 35,
+            'capability' => 'edit_theme_options',
+            'description' => __('Allows you to customize backgrounds in livingstone layout', 'mytheme'),
+        ));
+
+        $wp_customize->add_setting(ThemeSettings::BACKGROUND_1,
+            array(
+                'default' => './assets/img/bgd/watch&footer_bg.jpg',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_setting(ThemeSettings::BACKGROUND_2,
+            array(
+                'default' => './assets/img/bgd/story_bg.jpg',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_setting(ThemeSettings::BACKGROUND_3,
+            array(
+                'default' => './assets/img/bgd/team_bg.jpg',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_setting(ThemeSettings::BACKGROUND_4,
+            array(
+                'default' => './assets/img/bgd/graphic_bg.jpg',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_setting(ThemeSettings::BACKGROUND_5,
+            array(
+                'default' => './assets/img/bgd/watch&footer_bg.jpg',
+                'type' => 'theme_mod',
+                'capability' => 'edit_theme_options',
+                'transport' => 'postMessage',
+            )
+        );
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'livingstone_background_1',
+            array(
+                'label' => __('Trailer background', 'mytheme'),
+                'settings' => ThemeSettings::BACKGROUND_1,
+                'priority' => 10,
+                'section' => 'livingstone_options_backgrounds',
+            )
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'livingstone_background_2',
+            array(
+                'label' => __('Story background', 'mytheme'),
+                'settings' => ThemeSettings::BACKGROUND_2,
+                'priority' => 11,
+                'section' => 'livingstone_options_backgrounds',
+            )
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'livingstone_background_3',
+            array(
+                'label' => __('Team background', 'mytheme'),
+                'settings' => ThemeSettings::BACKGROUND_3,
+                'priority' => 12,
+                'section' => 'livingstone_options_backgrounds',
+            )
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'livingstone_background_4',
+            array(
+                'label' => __('Gallery background', 'mytheme'),
+                'settings' => ThemeSettings::BACKGROUND_4,
+                'priority' => 10,
+                'section' => 'livingstone_options_backgrounds',
+            )
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Image_Control(
+            $wp_customize,
+            'livingstone_background_5',
+            array(
+                'label' => __('Footer background', 'mytheme'),
+                'settings' => ThemeSettings::BACKGROUND_5,
+                'priority' => 10,
+                'section' => 'livingstone_options_backgrounds',
+            )
+        ));
     }
 
     public static function register_images($wp_customize)
@@ -16,7 +127,7 @@ class Livingstone_Customize
                 'title' => __('Images', 'mytheme'),
                 'priority' => 35,
                 'capability' => 'edit_theme_options',
-                'description' => __('Allows you to customize images in livingstone layout.', 'mytheme'),
+                'description' => __('Allows you to customize images in livingstone layout', 'mytheme'),
             )
         );
 
@@ -218,8 +329,15 @@ class Livingstone_Customize
         ?>
         <!--Customizer CSS-->
         <style type="text/css">
-            <?php self::generate_css('.header', 'background', ThemeSettings::HEADER_BG, 'url("', '")'); ?>
-            <?php self::generate_css('.team-img', 'background', ThemeSettings::TEAM_PHOTO, 'url("', '")'); ?>
+            <?php self::generate_css('.header', 'background-image', ThemeSettings::HEADER_BG, 'url("', '")'); ?>
+            <?php self::generate_css('.team-img', 'background-image', ThemeSettings::TEAM_PHOTO, 'url("', '")'); ?>
+            <?php self::generate_css('.watch', 'background-image', ThemeSettings::BACKGROUND_1, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.story', 'background-image', ThemeSettings::BACKGROUND_2, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.team', 'background-image', ThemeSettings::BACKGROUND_3, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.graphic', 'background-image', ThemeSettings::BACKGROUND_4, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.footer', 'background-image', ThemeSettings::BACKGROUND_5, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
+
+
             .header {
                 background-repeat: no-repeat;
                 background-position: center center, center bottom;

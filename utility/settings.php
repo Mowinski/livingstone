@@ -11,6 +11,13 @@ class ThemeSettings {
     const PRESS_KIT = 'press_kit';
     const FORM_SHORTCODE = 'form_shortcode';
     const CONTACT_FORM = 'contact_form';
+
+    const BACKGROUND_1 = 'background_1';
+    const BACKGROUND_2 = 'background_2';
+    const BACKGROUND_3 = 'background_3';
+    const BACKGROUND_4 = 'background_4';
+    const BACKGROUND_5 = 'background_5';
+
 }
 
 
