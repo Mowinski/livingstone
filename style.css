@@ -1141,10 +1141,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
-  background: url("./assets/img/bgd/header_bg.jpg"), url("./assets/img/decor/border.png");
-  background-repeat: no-repeat, no-repeat;
-  background-position: center center, center bottom;
-  background-size: cover, cover;
+  background: url("./assets/img/bgd/header_bg.jpg"), url("./assets/img/decor/border.png"), no-repeat no-repeat, center center, center bottom;
 }
 
 @media screen and (max-width: 768px) {
@@ -1407,11 +1404,20 @@ a {
 .col-team-left {
   align-self: center;
   width: 55%;
+  height: 80%;
 }
 
 @media screen and (max-width: 768px) {
   .col-team-left {
     width: 100%;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .col-team-left {
+    width: 100%;
+    height: 300px;
   }
 }
 
@@ -1487,7 +1493,7 @@ a {
 }
 
 .watch {
-  min-height: 100vh;
+  /*min-height: 100vh;*/
   padding-top: 2rem;
   padding-bottom: 2rem;
   background-image: url("./assets/img/decor/border.png"), url("./assets/img/bgd/watch&footer_bg.jpg");
@@ -1572,4 +1578,9 @@ a:hover {
 
 textarea { 
   resize: none; 
+}
+
+.team-img {
+  background: url("./assets/img/team/team.png"), no-repeat no-repeat, center center, center center;
+  background-size: contain;
 }
