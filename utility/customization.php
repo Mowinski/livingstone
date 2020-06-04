@@ -134,6 +134,21 @@ class Livingstone_Customize
             'transport' => 'postMessage',
         ));
 
+        $wp_customize->add_setting(ThemeSettings::FORM_SHORTCODE, array(
+            'default' => 0,
+            'type' => 'theme_mod',
+            'capability' => 'edit_theme_options',
+            'transport' => 'postMessage',
+        ));
+
+        $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'form_shortcode_text_control', array(
+            'type' => 'text',
+            'label' => __('Shortcode from form newsletter', 'mytheme'),
+            'settings' => ThemeSettings::FORM_SHORTCODE,
+            'priority' => 11,
+            'section' => 'livingstone_options_texts',
+        )));
+
         $wp_customize->add_control(new WP_Customize_Control($wp_customize, 'about_team_text_control', array(
             'type' => 'textarea',
             'label' => __('About us text', 'mytheme'),

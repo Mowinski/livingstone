@@ -133,6 +133,10 @@ textarea {
   display: flex;
   justify-content: center;
 }
+.n-letter-form form {
+  width: 100%;
+  text-align: center;
+}
 
 .n-letter-form input {
   width: 75%;
@@ -153,6 +157,8 @@ textarea {
   border-color: transparent;
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
+  height: 44px;
+  padding-top: 13px;
 }
 
 .contact-footer-row {

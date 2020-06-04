@@ -19,10 +19,9 @@
       <!-- NEWSLETTER -->
       <div class="news-letter">
         <h2>newsletter</h2>
-        <form action="" class="n-letter-form">
-          <input type="email" name="" id="" placeholder="enter your email">
-          <button class="news-letter-btn"></button>
-        </form>
+          <div class="n-letter-form">
+            <?php echo do_shortcode(get_theme_mod(ThemeSettings::FORM_SHORTCODE)); ?>
+          </div>
       </div>
 
     </div>
