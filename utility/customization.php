@@ -60,7 +60,7 @@ class Livingstone_Customize
 
         $wp_customize->add_control(new WP_Customize_Control(
             $wp_customize,
-            'livingstone_team_photo',
+            'livingstone_teaser_photo',
             array(
                 'type' => 'url',
                 'label' => __('Teaser', 'mytheme'),
