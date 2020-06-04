@@ -10,12 +10,9 @@
       </div>
       <h2 class="title">contact us</h2>
       <!-- CONTACT-FORM -->
-      <form class="contact-form" type="name" action="">
-        <input type="name" class="name" placeholder="enter your name">
-        <input type="text" class="email" placeholder="enter your email">
-        <textarea id="story" name="message" rows="2" cols="23" placeholder="enter your message"></textarea>
-        <button class="send-btn">send</button>
-      </form>
+        <div class="contact-form">
+        <?php echo do_shortcode(get_theme_mod(ThemeSettings::CONTACT_FORM)); ?>
+        </div>
       <!-- NEWSLETTER -->
       <div class="news-letter">
         <h2>newsletter</h2>

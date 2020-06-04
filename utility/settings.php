@@ -10,6 +10,7 @@ class ThemeSettings {
     const FOOTER_CAROUSEL = 'footer_carousel';
     const PRESS_KIT = 'press_kit';
     const FORM_SHORTCODE = 'form_shortcode';
+    const CONTACT_FORM = 'contact_form';
 }
 
 
