@@ -4,7 +4,7 @@
         <div class="swiper-wrapper photo-slider-wrapper">
             <?php foreach(get_images_from_post(get_theme_mod(ThemeSettings::FOOTER_CAROUSEL), ImageSize::FULL) as $image_src) :?>
             <div class="swiper-slide"
-                 style="background-image: url(<?php echo $image_src; ?>/assets/img/footer/footer-slide-item.png);">
+                 style="background-image: url(<?php echo $image_src; ?>);">
             </div>
             <?php endforeach; ?>
         </div>
