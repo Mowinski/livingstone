@@ -332,10 +332,10 @@ class Livingstone_Customize
             <?php self::generate_css('.header', 'background-image', ThemeSettings::HEADER_BG, 'url("', '")'); ?>
             <?php self::generate_css('.team-img', 'background-image', ThemeSettings::TEAM_PHOTO, 'url("', '")'); ?>
             <?php self::generate_css('.watch', 'background-image', ThemeSettings::BACKGROUND_1, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("', '")'); ?>
-            <?php self::generate_css('.story', 'background-image', ThemeSettings::BACKGROUND_2, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
-            <?php self::generate_css('.team', 'background-image', ThemeSettings::BACKGROUND_3, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
-            <?php self::generate_css('.graphic', 'background-image', ThemeSettings::BACKGROUND_4, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
-            <?php self::generate_css('.footer', 'background-image', ThemeSettings::BACKGROUND_5, 'url("' . get_template_directory_uri() . './assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.story', 'background-image', ThemeSettings::BACKGROUND_2, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.team', 'background-image', ThemeSettings::BACKGROUND_3, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("'g, '")'); ?>
+            <?php self::generate_css('.graphic', 'background-image', ThemeSettings::BACKGROUND_4, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("', '")'); ?>
+            <?php self::generate_css('.footer', 'background-image', ThemeSettings::BACKGROUND_5, 'url("' . get_template_directory_uri() . '/assets/img/decor/border.png"), url("', '")'); ?>
 
 
             .header {
